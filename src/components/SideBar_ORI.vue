@@ -103,6 +103,9 @@
             </div>
         </div>
     </div>
+    <div class="flex-1">
+        HEADER
+    </div>
 </template>
 
 <script>

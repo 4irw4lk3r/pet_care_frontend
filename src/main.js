@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 
 import './styles/tailwind.css';
+import '@fortawesome/fontawesome-free/js/all'
 
 createApp(App)
 .use(store)
