@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="text-white hover:text-green-500">
         <router-link :to="to" class="link" :class="{active: isActive}">
             <i class="icon" :class="icon" />
             <transition name="fade">
@@ -24,6 +24,7 @@ export default {
     setup(props) {
         const route = useRoute();
         const isActive = computed(() => route.path === props.to);
+        return { isActive, collapsed }
     }
  
 };
@@ -34,12 +35,19 @@ export default {
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
+    transition: 0.2s linear;
     transition: opacity 0.1s;
 }
 
 .fade-enter,
 .fade-leave-to {
     opacity: 0;
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 25px;
+  margin-right: 10px;
 }
 
 </style>
